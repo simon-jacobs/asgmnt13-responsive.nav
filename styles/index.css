@@ -3,11 +3,13 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 body {
     background-color: rgba(47, 54, 64, 1);
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 nav {
@@ -21,7 +23,10 @@ li, button, a, h2 {
     font-weight: 400;
     text-decoration: none;
     color: rgba(255, 255, 255, 0.8);
-    
+}
+
+ul {
+    margin: 0px 10;
 }
 
 .navbar {
@@ -30,21 +35,22 @@ li, button, a, h2 {
     align-items: center;
     flex-wrap: wrap;
     padding: 20px 5%;
-    
+}
+
+.brand-name {
+    position: relative;
 }
 
 .brand-name h2 {
+    font-size: 16px;
     transition: all 0.2s ease-in-out;
 }
 
 .brand-name h2:hover {
-    color: rgba(225, 177, 44, 1)
+    color: rgba(229, 142, 38, 1.0);
 }
 
-.navbar-links {
-    display: flex;
-    gap: 20px;
-    list-style: none;    
+.navbar-links { 
     align-items: center;
 }
 
@@ -53,12 +59,11 @@ li, button, a, h2 {
 }
 
 .navbar-links li {
-    display: inline-block;
+    list-style: none;
     padding: 0 20px;
 }
 
 .navbar-links li a {
-    font-weight: 700;
     transition: all 0.2s ease-in-out;
 }
 
@@ -67,30 +72,26 @@ li, button, a, h2 {
     cursor: pointer;
 }
 
-.container-button {
-    display: flex;
-}
-
-button {
+.button {
+    line-height: normal;
+    padding: 0 5px;
     border: none;
-    padding: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    background-color: rgba(0, 168, 255, 0.8);
+    background-color: rgba(229, 142, 38, 0.8);
     transition: all 0.2s ease-in-out;
 }
 
-button:hover {
-    background-color: rgba(0, 168, 255, 1);
+.button:hover {
+    background-color: rgba(229, 142, 38, 1);
 }
 
 .toggle-button {
-    position: absolute;
-    right: 20px;    
     display: none;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 30px;
-    height: 21px;
+    height: 30px;
 }
 
 .toggle-button .burger {
@@ -100,24 +101,25 @@ button:hover {
     border-radius: 10px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 770px) {
     .toggle-button {
         display: flex;
+        flex-shrink: 0;
     }
 
     .container-button {
         display: flex;
+        align-items: center;
     }
 
     .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }    
+        flex-direction: row;
+        align-items: center;
+    }
 
     .navbar-links, .container-button {
         display: none;
         width: 100%;
-        
     }
 
     .navbar-links ul, .container-button {
@@ -127,7 +129,7 @@ button:hover {
 
     .navbar-links li, .container-button {
         text-align: center;
-        padding: 10px;
+        padding: 10px 0;
     }
 
     .navbar-links.active, .container-button.active {
