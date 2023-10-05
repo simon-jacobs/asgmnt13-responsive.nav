@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+body {
+    background-color: rgba(47, 54, 64, 1);
+}
+
+header {
+    background-color: rgba(53, 59, 72, 1);
+    user-select: none;
+}
+
+li, button, a, h2 {
+    font-family: 'Cairo', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    
+}
+
+.navbar-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 10% ;
+}
+
+.brand-name h2 {
+    transition: all 0.2s ease-in-out;
+}
+
+.brand-name h2:hover {
+    color: rgba(225, 177, 44, 1)
+}
+
+.navbar-links {
+    list-style: none;    
+}
+
+.navbar-links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.navbar-links li a {
+    font-weight: 700;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar-links li a:hover {
+    color: rgba(0, 168, 255, 1);
+    cursor: pointer;
+}
+
+button {
+    border-radius: none;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: rgba(0, 168, 255, 0.8);
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: rgba(0, 168, 255, 1);
+}
+
