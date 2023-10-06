@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400&display=swap');
 
 * {
     margin: 0;
@@ -12,13 +12,15 @@ body {
     line-height: 1.5;
 }
 
+/* NAVIGATION BAR STYLING */
+
 nav {
     background-color: rgba(53, 59, 72, 1);
     user-select: none;
 }
 
 li, button, a, h2 {
-    font-family: 'Cairo', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     font-size: 16px;
     font-weight: 400;
     text-decoration: none;
@@ -26,7 +28,7 @@ li, button, a, h2 {
 }
 
 ul {
-    margin: 0px 10;
+    margin: 0px 10px;
 }
 
 .navbar {
@@ -74,24 +76,31 @@ ul {
 
 .button {
     line-height: normal;
-    padding: 0 5px;
+    padding: 5px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     background-color: rgba(229, 142, 38, 0.8);
     transition: all 0.2s ease-in-out;
+    font-weight: 200;
 }
 
 .button:hover {
     background-color: rgba(229, 142, 38, 1);
 }
 
+/* BURGER ICON STYLING */
+
 .toggle-button {
     display: none;
     flex-direction: column;
     justify-content: space-around;
-    width: 30px;
-    height: 30px;
+    width: 21px;
+    height: 21px;
+}
+
+.toggle-button:active {
+    animation: animate__fadeIn;
 }
 
 .toggle-button .burger {
@@ -100,6 +109,8 @@ ul {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
 }
+
+/* MEDIA QUERIES */
 
 @media (max-width: 770px) {
     .toggle-button {
